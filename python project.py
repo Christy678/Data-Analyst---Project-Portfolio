@@ -1,3 +1,4 @@
+# Example 1
 # Calculate the multiplication and sum of two numbers
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
@@ -9,7 +10,7 @@ if product <= 1000:
 else:
     print("Sum of the two numbers:", num1 + num2)
     
-
+# Example 2
 # Remove first 'n' characters from a string 
 def remove_chars(word, n):
     print('Original string:', word)
@@ -21,6 +22,7 @@ word = input("Enter your word: ")
 print(remove_chars(word, 4))
 print(remove_chars(word, 2))
 
+# Example 3
 # Friend activity timers
 friends = ["Rolf", "Jane", "Anne", "Sarah", "Carolene"]
 Last_seen = ["3:00", "12:00", "7:00", "5:00", "6:00"]
@@ -37,6 +39,7 @@ def multiply():
 
 print(multiply())
 
+# Example 4
 # Print out numbers from 1 to 100 (including 100).
 # But, instead of printing multiples of 3, print "Fizz"
 # Instead of printing multiples of 5, print "Buzz"
@@ -52,7 +55,7 @@ for numbers in range(1, 101):
     else:
         print(numbers)
         
-
+# Example 5
 # random magic ball predictions 
 import random
 
