@@ -82,3 +82,48 @@ else:
     answer = "Error"
 
 print(answer)
+
+# Example 6
+# Expense tracker program 
+# User's Budget: Allow the user to set an initial budget for their expenses. 
+def deposit():
+    while True:
+        amount = input("What would you like to deposit? $")
+        if amount.isdigit():
+            amount = int(amount)
+            if amount > 0:
+                break
+            else:
+                print("Amount must be greater than 0")
+        else:
+            print("Please enter a number.")
+    return amount
+
+# Add Expenses: Feature that lets users to add their daily expenses within their category. 
+def expense_by_category():
+    total = 0
+
+    for category in range(3):
+        expense_category = input("Enter expense category: ") 
+        amount_spent = float(input(f"How much did you spend for {expense_category}?: "))
+        total += amount_spent
+
+    print(f"Total spending amount: {total}")
+    return total
+
+# Main function
+def main():
+    balances = deposit()
+    expenses = expense_by_category()
+
+    if expenses > balances:
+        print("Your budget is exceeded!")
+    else:
+        print("Your budget is within limits!")
+
+    current_savings = balances - expenses
+    if current_savings > 0:
+        print(f"Your savings is {current_savings}")
+    else:
+        print("Insufficient Balance! Savings are low.")
+main ()
